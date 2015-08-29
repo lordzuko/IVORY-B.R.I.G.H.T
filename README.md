@@ -1,4 +1,4 @@
-# Do Hadoop Everywhere
+# IVORT B.R.I.G.H.T - Do Hadoop Everywhere
 
 For those who wondering what's *B.R.I.G.H.T* in *IVORY*, it is *Beautiful, Resourceful, Insightful,Graphical, Hadoop Tool*.  
 
