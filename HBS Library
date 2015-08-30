@@ -1,92 +1,73 @@
-# Hadoop Based Solution Library
+Hadoop Based Solution Library
 
-###scan_cluster.py :
-script uses nmap to scan the systems in network.
-We need to provide the ip range inside the script and it finds all the
-systems in the cluster.
+scan_cluster.py :
 
-###auto_scan.py :
-it scans the cluster using scan_cluster.py and writes the ip of sytems in
-nodes file.
-We need to provide the ip of host system (i.e. the sytem on which the
-automation script is initiated)
-then this sends the commands to all the systems in the cluster asking
-their configuration so that namenode,jobtracker , datanode and
-tasktrackers can be selected.
-all the systems sends back their configuartion file to the host system
-which is kept at folder named temp and a script best_selector.py selects
-the best nodes for all
-purposes.
+Script uses nmap to scan the systems in network.
+We need to provide the ip range inside the script and it finds all the systems in the cluster.
 
-###available_hdd.py :
-this script is for finding out the configuaration
-of nodes in cluster.
-auto_scan.py call available_hdd.py on all the nodes and all the other
-nodes sends their configuartion the host system.
-this script uses parted command to find the available hdd and free
-command to find the available ram
+auto_scan.py :
 
-###best_selector.py :
-this script is called by auto_scan.py . It finds the most suitable node
-for namenode , jobtracker , tasktracker , datanode
+It scans the cluster using scan_cluster.py and writes the ip of sytems in nodes file.
+We need to provide the ip of host system (i.e. the sytem on which the automation script is initiated)
+then this sends the commands to all the systems in the cluster asking their configuration so that 
+namenode,jobtracker , datanode andtasktrackers can be selected. All the systems sends back their 
+configuartion file to the host system which is kept at folder named temp and a script best_selector.py 
+selects the best nodes for all purposes.
 
-###core-site_modifier.py :
-the sole purpose of this script is to make changes in core-site.xml
-this script takes namenode ip and trash enable status as arguement.
-then using the sed command it makes changes to files at the core-site.xml
-file
+available_hdd.py :
+This script is for finding out the configuaration of nodes in cluster.
+auto_scan.py call available_hdd.py on all the nodes and all the othern odes sends their configuartion 
+the host system. This script uses parted command to find the available hdd and free command to find the 
+available ram
 
-###hdfs-site_modifier.py :
-the purpose of this script is to make change in hdfs-site.xml
-it can change the hdfs-site.xml according to the case of datanode or
-namenode.it asks for datanode/namenode configuration , heartBeat factor which is
-applicable in case of datanode , client so in case of namenode it can be
-just left by writing 'n' the script will automatically make the suitable
-changes.
-It also asks for replication factor, block size.
+best_selector.py :
+this script is called by auto_scan.py . It finds the most suitable node for namenode , jobtracker , 
+tasktracker , datanode
+
+core-site_modifier.py :
+the sole purpose of this script is to make changes in core-site.xml this script takes namenode ip and 
+trash enable status as arguement. Then using the sed command it makes changes to files at the core-site.xml
+file.
+
+hdfs-site_modifier.py :
+The purpose of this script is to make change in hdfs-site.xml it can change the hdfs-site.xml according
+to the case of datanode or namenode.it asks for datanode/namenode configuration , heartBeat factor which is
+applicable in case of datanode , client so in case of namenode it can be just left by writing 'n' the script 
+will automatically make the suitable changes. It also asks for replication factor, block size.
+
 mapred-site_modifier.py :
-The purpose of this script is to make changes in mapred-site.xml
-it can change the mapred-site.xml according to the case of tasktracker or
-jobtracker.
-It asks for jobtracker IP and what kind of scheduler you want to
+The purpose of this script is to make changes in mapred-site.xml it can change the mapred-site.xml according 
+to the case of tasktracker or jobtracker. It asks for jobtracker IP and what kind of scheduler you want to
 configure ( FIFO / FAIR )
+
 datanode.py :
-this script makes required changes to be done for configuring a datanode.
-It asks for namenode ip and heart beat as argument . It internally
-configures core-site.xml and hdfs-site.xml by calling core-
-site_modifier.py and hdfs-site_modifier.py .
+This script makes required changes to be done for configuring a datanode. It asks for namenode ip and heart 
+beat as argument . It internally configures core-site.xml and hdfs-site.xml by calling core- site_modifier.py 
+and hdfs-site_modifier.py .
 
 
-###jobtracker.py :
-this script makes required changes to be done for configuring a
-jobtracker node.
-It asks for namenode ip , jobtracker ip and FAIR/FIFO as argument . It
-internally configures core-site.xml and mapred-site.xml by calling core-
-site_modifier.py and mapred-site_modifier.py .
+jobtracker.py :
+This script makes required changes to be done for configuring a jobtracker node. It asks for namenode ip , 
+jobtracker ip and FAIR/FIFO as argument . It internally configures core-site.xml and mapred-site.xml by 
+calling core-site_modifier.py and mapred-site_modifier.py .
 
-###namenode.py :
-this script makes required changes to be done for configuring a namenode.
-It asks for namenode ip ,enabling trash (y/n) , replication factor,
-blk_size . It internally configures core-site.xml and hdfs-site.xml by
+namenode.py :
+This script makes required changes to be done for configuring a namenode. It asks for namenode ip ,enabling 
+trash (y/n) , replication factor, blk_size . It internally configures core-site.xml and hdfs-site.xml by
 calling core-site_modifier.py and hdfs-site_modifier.py .
 
-###tasktracker.py :
-this script makes required changes to be done for configuring a
-tasktraker node .
-It asks for namenode ip and jobtracker ip as argument . It internally
-configures mapred-site.xml by calling mapred-site_modifier.py
+tasktracker.py :
+This script makes required changes to be done for configuring a tasktraker node . It asks for namenode ip 
+and jobtracker ip as argument . It internally configures mapred-site.xml by calling mapred-site_modifier.py
 
-###Pending_nodes.py :
-it checks which nodes are node selected in the cluster
+Pending_nodes.py :
+It checks which nodes are node selected in the cluster
 
-###user_quota.py :
-this script is used for setting up the user quota inside the hadoop
-if some field is not applicable u can write 'n'.
+user_quota.py :
+This script is used for setting up the user quota inside the hadoop if some field is not applicable u can write 'n'.
 to clear existing quota use 'c' as argument.it creates a user directory in hadoop and gives required permissions and
 changes the ownership of directory
 
-###customisedSetup.py :
-This script runs
-customised installation page of our portal.in the background of setupTypical.py :
-This script allows the setup of a standalone machine for practice purpose
-basically.
+customisedSetup.py :
+This script runs customised installation page of our portal.in the background of setupTypical.py :
+This script allows the setup of a standalone machine for practice purpose basically.
