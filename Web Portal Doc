@@ -1,0 +1,35 @@
+Web Portal
+
+1. INSTALLATION MODES: Hadoop portal provides user with a way to setup their cluster first
+                       before they can do administraion over it. It provides three installation modes:
+                       a) Typical Installation: Typical mode as its name sounds, provides the user with automatic
+                          install feature which can be compared with one click cluster setup with the optimal settings
+                          which the automation scripts will do it automatically for you.
+
+                      b) Customised Installation: Customised mode feature is for advanced users which provides
+                         them with the feature of tweaking and tuning their cluster according to their needs.
+                         
+                      c) Minimal Installation: Minimal installation is the feature for those who wants to learn
+                        hadoop (beginners). It setup the cluster on the standalone machine viz. also called as pseudo
+                        cluster.
+                      
+                      
+LOOKING UNDER DIFFERENT INSTALLATION MODES:
+TYPICAL INSTALLATION:
+                      Welcome Typical.html : On this page user will be asked IP of NIS server and NFS Server.
+                        Since this is just a beta version we are using NIS server for authentication purpose, 
+                        in upcoming versions we can also use LDAP servers.
+                        On clicking Start user will be taken back to next page.
+                      
+                      FinishedT.html: This page is the confirmation page which will give the status of installation
+                        process. It does not do much as in typical installation user is not asked about anything about 
+                        the cluster.
+                        On clicking Finalize button. User will be taken to login page from where user can administer
+                        the cluster.
+
+                        What happend in the background ?
+                        
+                        After clicking the Start button on Welcome Typical.html , provided IP's of NIS and NFS server
+                        is given to the setupTypical.py script through the CGI call and NIS and NFS servers will be
+                        automatically setup in along with the cluster, and then these servers can be used during user
+                        authentication and user quota setup in the background.
