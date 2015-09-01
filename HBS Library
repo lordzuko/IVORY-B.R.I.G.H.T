@@ -68,6 +68,10 @@ This script is used for setting up the user quota inside the hadoop if some fiel
 to clear existing quota use 'c' as argument.it creates a user directory in hadoop and gives required permissions and
 changes the ownership of directory
 
+restart.py 
+This script give you the the facility to restart any of the desired cluster daemons or all  of them at once.
+
+
 customisedSetup.py :
 This script runs customised installation page of our portal.in the background of setupTypical.py :
 This script allows the setup of a standalone machine for practice purpose basically.
