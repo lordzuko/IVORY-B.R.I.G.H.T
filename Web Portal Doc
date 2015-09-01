@@ -33,3 +33,40 @@ TYPICAL INSTALLATION:
                         is given to the setupTypical.py script through the CGI call and NIS and NFS servers will be
                         automatically setup in along with the cluster, and then these servers can be used during user
                         authentication and user quota setup in the background.
+FUNCTIONALITIES ONCE THE CLUSTER IS READY AND RUNNING:
+                      FileManager.html : On this page the basic functionalities of adding and removing a file to and from
+                        the cluster are provided. User can list all the files and folders in the base directory and 
+                        remove them if desired, all by just one click on the provided delete button. User may also upload the
+                        directly into the hadoop cluster from any device(not necessarily using a lonux distribution).
+                        
+                        What happened in the background?
+                        By uploading the file on the web server we use it as a staging ground before the webserver, which itself
+                        is a client of namenode, uploads the staged file into the hadoop cluster by using a simple CGI script.
+                        
+                      Jobs.html : On this page user is provided with 2 different forms. In one form user is provided with some
+                        precompiled map-reduce jobs as example runs and in second form user may provide a custom job written in
+                        any language by asking them for separate mapper and reducer file and the path of input file and output 
+                        directory in hdfs.
+                      
+                        What happens in background?
+                        The language independence in hadoop cluster's map reduce programming is achieved by using hadoop's 
+                        streaming library for copiling the mapper and reducer. By cleverly using any language for activating 
+                        shell scripts one my achieve even more flexibilty by running some preinstalled command line softwares 
+                        for MR jobs.
+            Resusing and customising Hadoop's original interface: 
+                      HDFS.html: For monitoriing the cluster instead of rebuilding everthing from scratch we embedded the
+                        hadoop's original HDFS interface in our page after changind and customising its original css. As we
+                        in simplicity and beauty this helped us in achieving abstraction of port awareness in user for using 
+                        the original interface at the same time providing him all rhe required information about his cluster.
+                      
+                      Mapred (2).html: For managing jobs in the cluster we embeded the jobtracker interface as well in a 
+                        separate page with a similar mindset. This helped us in achieving high level of abstraction in MR
+                        management and administration.
+                        
+  FUTURE WORK: 
+                      We are trying to achieve a fully functional Dashboard support with notifications for administrative 
+                      purposes and will soon be implenting a complete framework support for pig, hive, sqoop and HBase so 
+                      as to provide a fully ready to use cluster to anyone who would like to give IVORY a chance to catch 
+                      their eyes.
+                        
+ 
