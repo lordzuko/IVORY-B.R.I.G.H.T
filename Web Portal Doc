@@ -37,7 +37,7 @@ FUNCTIONALITIES ONCE THE CLUSTER IS READY AND RUNNING:
                       FileManager.html : On this page the basic functionalities of adding and removing a file to and from
                         the cluster are provided. User can list all the files and folders in the base directory and 
                         remove them if desired, all by just one click on the provided delete button. User may also upload the
-                        directly into the hadoop cluster from any device(not necessarily using a lonux distribution).
+                        directly into the hadoop cluster from any device(not necessarily using a linux distribution).
                         
                         What happened in the background?
                         By uploading the file on the web server we use it as a staging ground before the webserver, which itself
