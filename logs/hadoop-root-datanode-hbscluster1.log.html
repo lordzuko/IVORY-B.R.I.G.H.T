@@ -1,0 +1,322 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body>2015-06-18
+ 22:51:09,139 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: 
+STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting DataNode
+STARTUP_MSG:   host = java.net.UnknownHostException: hbscluster1: 
+hbscluster1
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 1.2.1
+STARTUP_MSG:   build = 
+https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1.2 -r 
+1503152; compiled by 'mattf' on Mon Jul 22 15:27:42 PDT 2013
+STARTUP_MSG:   java = 1.7.0_51
+************************************************************/
+2015-06-18 22:51:09,409 INFO 
+org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from 
+hadoop-metrics2.properties
+2015-06-18 22:51:09,504 INFO 
+org.apache.hadoop.metrics2.impl.MetricsSourceAdapter: MBean for source 
+MetricsSystem,sub=Stats registered.
+2015-06-18 22:51:14,513 ERROR 
+org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Error getting 
+localhost name. Using 'localhost'...
+java.net.UnknownHostException: hbscluster1: hbscluster1
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1473)
+	at 
+org.apache.hadoop.metrics2.impl.MetricsSystemImpl.getHostname(MetricsSystemImpl.java:481)
+
+	at 
+org.apache.hadoop.metrics2.impl.MetricsSystemImpl.configureSystem(MetricsSystemImpl.java:412)
+
+	at 
+org.apache.hadoop.metrics2.impl.MetricsSystemImpl.configure(MetricsSystemImpl.java:408)
+
+	at 
+org.apache.hadoop.metrics2.impl.MetricsSystemImpl.start(MetricsSystemImpl.java:152)
+
+	at 
+org.apache.hadoop.metrics2.impl.MetricsSystemImpl.init(MetricsSystemImpl.java:133)
+
+	at 
+org.apache.hadoop.metrics2.lib.DefaultMetricsSystem.init(DefaultMetricsSystem.java:40)
+
+	at 
+org.apache.hadoop.metrics2.lib.DefaultMetricsSystem.initialize(DefaultMetricsSystem.java:50)
+
+	at 
+org.apache.hadoop.hdfs.server.datanode.DataNode.instantiateDataNode(DataNode.java:1650)
+
+	at 
+org.apache.hadoop.hdfs.server.datanode.DataNode.createDataNode(DataNode.java:1669)
+
+	at 
+org.apache.hadoop.hdfs.server.datanode.DataNode.secureMain(DataNode.java:1795)
+
+	at 
+org.apache.hadoop.hdfs.server.datanode.DataNode.main(DataNode.java:1812)
+Caused by: java.net.UnknownHostException: hbscluster1
+	at java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:901)
+	at 
+java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1293)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1469)
+	... 11 more
+2015-06-18 22:51:14,517 INFO 
+org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot 
+period at 10 second(s).
+2015-06-18 22:51:14,517 INFO 
+org.apache.hadoop.metrics2.impl.MetricsSystemImpl: DataNode metrics 
+system started
+2015-06-18 22:51:14,662 INFO 
+org.apache.hadoop.metrics2.impl.MetricsSourceAdapter: MBean for source 
+ugi registered.
+2015-06-18 22:51:14,753 INFO org.apache.hadoop.util.NativeCodeLoader: 
+Loaded the native-hadoop library
+2015-06-18 22:51:14,908 ERROR 
+org.apache.hadoop.hdfs.server.datanode.DataNode: 
+java.net.UnknownHostException: hbscluster1: hbscluster1
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1473)
+	at 
+org.apache.hadoop.security.SecurityUtil.getLocalHostName(SecurityUtil.java:271)
+
+	at org.apache.hadoop.security.SecurityUtil.login(SecurityUtil.java:289)
+	at org.apache.hadoop.hdfs.server.datanode.DataNode.<init>(DataNode.java:313)
+
+	at 
+org.apache.hadoop.hdfs.server.datanode.DataNode.makeInstance(DataNode.java:1712)
+
+	at 
+org.apache.hadoop.hdfs.server.datanode.DataNode.instantiateDataNode(DataNode.java:1651)
+
+	at 
+org.apache.hadoop.hdfs.server.datanode.DataNode.createDataNode(DataNode.java:1669)
+
+	at 
+org.apache.hadoop.hdfs.server.datanode.DataNode.secureMain(DataNode.java:1795)
+
+	at 
+org.apache.hadoop.hdfs.server.datanode.DataNode.main(DataNode.java:1812)
+Caused by: java.net.UnknownHostException: hbscluster1
+	at java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:901)
+	at 
+java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1293)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1469)
+	... 8 more
+
+2015-06-18 22:51:14,912 INFO 
+org.apache.hadoop.hdfs.server.datanode.DataNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down DataNode at java.net.UnknownHostException: 
+hbscluster1: hbscluster1
+************************************************************/
+2015-06-18 22:52:48,676 INFO 
+org.apache.hadoop.hdfs.server.datanode.DataNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting DataNode
+STARTUP_MSG:   host = java.net.UnknownHostException: hbscluster1: 
+hbscluster1
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 1.2.1
+STARTUP_MSG:   build = 
+https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1.2 -r 
+1503152; compiled by 'mattf' on Mon Jul 22 15:27:42 PDT 2013
+STARTUP_MSG:   java = 1.7.0_51
+************************************************************/
+2015-06-18 22:52:48,934 INFO 
+org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from 
+hadoop-metrics2.properties
+2015-06-18 22:52:49,029 INFO 
+org.apache.hadoop.metrics2.impl.MetricsSourceAdapter: MBean for source 
+MetricsSystem,sub=Stats registered.
+2015-06-18 22:52:54,037 ERROR 
+org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Error getting 
+localhost name. Using 'localhost'...
+java.net.UnknownHostException: hbscluster1: hbscluster1
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1473)
+	at 
+org.apache.hadoop.metrics2.impl.MetricsSystemImpl.getHostname(MetricsSystemImpl.java:481)
+
+	at 
+org.apache.hadoop.metrics2.impl.MetricsSystemImpl.configureSystem(MetricsSystemImpl.java:412)
+
+	at 
+org.apache.hadoop.metrics2.impl.MetricsSystemImpl.configure(MetricsSystemImpl.java:408)
+
+	at 
+org.apache.hadoop.metrics2.impl.MetricsSystemImpl.start(MetricsSystemImpl.java:152)
+
+	at 
+org.apache.hadoop.metrics2.impl.MetricsSystemImpl.init(MetricsSystemImpl.java:133)
+
+	at 
+org.apache.hadoop.metrics2.lib.DefaultMetricsSystem.init(DefaultMetricsSystem.java:40)
+
+	at 
+org.apache.hadoop.metrics2.lib.DefaultMetricsSystem.initialize(DefaultMetricsSystem.java:50)
+
+	at 
+org.apache.hadoop.hdfs.server.datanode.DataNode.instantiateDataNode(DataNode.java:1650)
+
+	at 
+org.apache.hadoop.hdfs.server.datanode.DataNode.createDataNode(DataNode.java:1669)
+
+	at 
+org.apache.hadoop.hdfs.server.datanode.DataNode.secureMain(DataNode.java:1795)
+
+	at 
+org.apache.hadoop.hdfs.server.datanode.DataNode.main(DataNode.java:1812)
+Caused by: java.net.UnknownHostException: hbscluster1
+	at java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:901)
+	at 
+java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1293)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1469)
+	... 11 more
+2015-06-18 22:52:54,040 INFO 
+org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot 
+period at 10 second(s).
+2015-06-18 22:52:54,040 INFO 
+org.apache.hadoop.metrics2.impl.MetricsSystemImpl: DataNode metrics 
+system started
+2015-06-18 22:52:54,231 INFO 
+org.apache.hadoop.metrics2.impl.MetricsSourceAdapter: MBean for source 
+ugi registered.
+2015-06-18 22:52:54,692 ERROR 
+org.apache.hadoop.hdfs.server.datanode.DataNode: 
+java.net.UnknownHostException: hbscluster1: hbscluster1
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1473)
+	at 
+org.apache.hadoop.security.SecurityUtil.getLocalHostName(SecurityUtil.java:271)
+
+	at org.apache.hadoop.security.SecurityUtil.login(SecurityUtil.java:289)
+	at org.apache.hadoop.hdfs.server.datanode.DataNode.<init>(DataNode.java:313)
+
+	at 
+org.apache.hadoop.hdfs.server.datanode.DataNode.makeInstance(DataNode.java:1712)
+
+	at 
+org.apache.hadoop.hdfs.server.datanode.DataNode.instantiateDataNode(DataNode.java:1651)
+
+	at 
+org.apache.hadoop.hdfs.server.datanode.DataNode.createDataNode(DataNode.java:1669)
+
+	at 
+org.apache.hadoop.hdfs.server.datanode.DataNode.secureMain(DataNode.java:1795)
+
+	at 
+org.apache.hadoop.hdfs.server.datanode.DataNode.main(DataNode.java:1812)
+Caused by: java.net.UnknownHostException: hbscluster1
+	at java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:901)
+	at 
+java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1293)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1469)
+	... 8 more
+
+2015-06-18 22:52:54,702 INFO 
+org.apache.hadoop.hdfs.server.datanode.DataNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down DataNode at java.net.UnknownHostException: 
+hbscluster1: hbscluster1
+************************************************************/
+2015-06-18 22:55:02,771 INFO 
+org.apache.hadoop.hdfs.server.datanode.DataNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting DataNode
+STARTUP_MSG:   host = java.net.UnknownHostException: hbscluster1: 
+hbscluster1
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 1.2.1
+STARTUP_MSG:   build = 
+https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1.2 -r 
+1503152; compiled by 'mattf' on Mon Jul 22 15:27:42 PDT 2013
+STARTUP_MSG:   java = 1.7.0_51
+************************************************************/
+2015-06-18 22:55:03,040 INFO 
+org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from 
+hadoop-metrics2.properties
+2015-06-18 22:55:03,136 INFO 
+org.apache.hadoop.metrics2.impl.MetricsSourceAdapter: MBean for source 
+MetricsSystem,sub=Stats registered.
+2015-06-18 22:55:08,145 ERROR 
+org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Error getting 
+localhost name. Using 'localhost'...
+java.net.UnknownHostException: hbscluster1: hbscluster1
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1473)
+	at 
+org.apache.hadoop.metrics2.impl.MetricsSystemImpl.getHostname(MetricsSystemImpl.java:481)
+
+	at 
+org.apache.hadoop.metrics2.impl.MetricsSystemImpl.configureSystem(MetricsSystemImpl.java:412)
+
+	at 
+org.apache.hadoop.metrics2.impl.MetricsSystemImpl.configure(MetricsSystemImpl.java:408)
+
+	at 
+org.apache.hadoop.metrics2.impl.MetricsSystemImpl.start(MetricsSystemImpl.java:152)
+
+	at 
+org.apache.hadoop.metrics2.impl.MetricsSystemImpl.init(MetricsSystemImpl.java:133)
+
+	at 
+org.apache.hadoop.metrics2.lib.DefaultMetricsSystem.init(DefaultMetricsSystem.java:40)
+
+	at 
+org.apache.hadoop.metrics2.lib.DefaultMetricsSystem.initialize(DefaultMetricsSystem.java:50)
+
+	at 
+org.apache.hadoop.hdfs.server.datanode.DataNode.instantiateDataNode(DataNode.java:1650)
+
+	at 
+org.apache.hadoop.hdfs.server.datanode.DataNode.createDataNode(DataNode.java:1669)
+
+	at 
+org.apache.hadoop.hdfs.server.datanode.DataNode.secureMain(DataNode.java:1795)
+
+	at 
+org.apache.hadoop.hdfs.server.datanode.DataNode.main(DataNode.java:1812)
+Caused by: java.net.UnknownHostException: hbscluster1
+	at java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:901)
+	at 
+java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1293)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1469)
+	... 11 more
+2015-06-18 22:55:08,148 INFO 
+org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot 
+period at 10 second(s).
+2015-06-18 22:55:08,148 INFO 
+org.apache.hadoop.metrics2.impl.MetricsSystemImpl: DataNode metrics 
+system started
+2015-06-18 22:55:08,308 INFO 
+org.apache.hadoop.metrics2.impl.MetricsSourceAdapter: MBean for source 
+ugi registered.
+2015-06-18 22:55:13,548 ERROR 
+org.apache.hadoop.hdfs.server.datanode.DataNode: 
+java.net.UnknownHostException: hbscluster1: hbscluster1
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1473)
+	at 
+org.apache.hadoop.security.SecurityUtil.getLocalHostName(SecurityUtil.java:271)
+
+	at org.apache.hadoop.security.SecurityUtil.login(SecurityUtil.java:289)
+	at org.apache.hadoop.hdfs.server.datanode.DataNode.<init>(DataNode.java:313)
+	at org.apache.hadoop.hdfs.server.datanode.DataNode.makeInstance(DataNode.java:1712)
+	at org.apache.hadoop.hdfs.server.datanode.DataNode.instantiateDataNode(DataNode.java:1651)
+	at org.apache.hadoop.hdfs.server.datanode.DataNode.createDataNode(DataNode.java:1669)
+	at org.apache.hadoop.hdfs.server.datanode.DataNode.secureMain(DataNode.java:1795)
+	at org.apache.hadoop.hdfs.server.datanode.DataNode.main(DataNode.java:1812)
+Caused by: java.net.UnknownHostException: hbscluster1
+	at java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:901)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1293)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1469)
+	... 8 more
+
+2015-06-18 22:55:13,549 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down DataNode at java.net.UnknownHostException: hbscluster1: hbscluster1
+************************************************************/
+</init></init></init></body></html>

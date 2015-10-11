@@ -1,0 +1,14 @@
+[linux]
+baseurl=file:///root/Desktop/rhe6
+gpgcheck=0
+
+
+[extra]
+baseurl=file:///root/Desktop/rhe6/rhel6rpm
+gpgcheck=0
+
+
+[packages]
+baseurl=file:///root/Desktop/rhe6/Packages
+gpgcheck=0
+

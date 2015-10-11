@@ -1,0 +1,8 @@
+
+[InstallMedia]
+name=Red Hat Enterprise Linux 6.4
+mediaid=1359576196.686790
+metadata_expire=-1
+gpgcheck=0
+cost=500
+enabled=0

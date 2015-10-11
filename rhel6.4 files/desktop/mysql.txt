@@ -1,0 +1,216 @@
+//
+
+Enable remote login for mysql-server
+
+GRANT ALL on *.* to root@'192.168.0.20' IDENTIFIED BY 'redhat';
+FLUSH PRIVILEDGES;
+
+DURING LOGIN:
+mysql -h 192.168.0.20 -u root -p
+
+//
+
+
+/etc/my.chf
+ 
+service mysqld restart
+
+port 3306
+
+in my.chf 
+default data directory = /var/lib/mysql
+
+socket file is present at the file /var/lib/mysql/mysql.sock
+
+mysql's root account has entire permission in /var/lib/mysql
+
+
+mysql -u root password ______
+
+mysql -u root -p
+t
+in mysql console
+--> use command works even without semicolon
+
+1) show databases;
+2) create database new;
+3) show engines;
+4) show tables;
+5) Data types: ---->
+6) varchar v/s char
+7) create table student (
+    -> id  INT(10) NOT NULL AUTO_INCREMENT,
+    -> name CHAR(20) NOT NULL,
+    -> email VARCHAR(20),
+    -> phone INT(12) NOT NULL,
+    -> remark VARCHAR(10),
+    -> PRIMARY_KEY(id)
+    -> );
+8)describle table
+  desc table_name;
+
+9)show create table student;
+  to view my schema and how i created the table
+
+10) insert into student(id,name,email) VALUES (1,"vimal","vimal@lw.com")
+
+11) select * from student;
+
+12) show tables;
+
+13) alias --> select count(distinct(name)) AS c from ___
+
+
+----------------------------------date -> 10/6/15-----------------------------------------------   
+
+
+data type
+---------
+
+id -> int(5)
+name -> char(255)
+phone -> bigint(12)
+main -> varchar(255)
+gender -> enum('M','F')   // only among these values
+country -> char(2)
+regdate -> timestamp
+remark -> textlt 
+
+
+some keywords 
+default "IN"
+UNIQUE
+auto_increment
+not null
+
+
+
+
+-------------------------------------installation-------------------------------------------------
+
+yum install mysql-server
+
+service mysqld restart
+
+/usr/bin/mysqladmin -u root password 'lw'
+
+mysql -u root -p
+
+
+___________________________how to rename database ??__________________________________________________
+
+/var/lib/mysql/
+
+------------------------
+in mysql 
+
+select curdate();
+
+select now();
+
+used in case selecting current time now ---->>>      default now();
+
+
+____________ 11 - 6 - 15 ______________________________________________________________________________
+
+
+select * from student ORDER BY id DESC limit 4;   --> will show the top four entries
+
+
+limit assumes that pointer starts from top 
+
+so if we need to see the middle entries then we need to shift the start pointer
+
+limit 0,2 --> top 2
+limit 3,5 --> 3rd to 7th 
+
+select * from student where name IS NULL; / IS NOT NULL;
+
+UPDATE student SET email='r.gmail.com' WHERE id = 5;
+
+DELETE FROM student WHERE id = 15;
+
+DROP TABLE;
+
+DROP DATABASE lw;
+
+password breaking in mysql
+---------------------------
+
+ps -aux | grep mysql
+service mysqld status
+
+
+
+mysqld_safe --skip-grant-tables
+
+show databases  __.> go to mysqld database
+
+use mysql
+
+go to user table
+select * from user
+
+UPDATE user SET Password=PASSWORD('vimal') WHERE User='root';
+
+
+----------------------------Date 12-6-15------------------------------
+ 
+
+SQL 
+   1-> DDL (Data Definition Language)
+       CREATE, DROP , ALTER ,
+   
+   2-> DML (Data Manipulation Language)
+       SELECT, DELETE, INSERT, UPDATE 
+
+   3-> DCL (Data Control Language)
+       GRANT
+   
+   4-> TCL (Transational Control Language)
+       ROLL BACK 
+       
+   
+   
+commands-----------------------------------------------------------------------------
+ 
+
+SHOW TABLE STATUS ;
+SHOW TABLE STATUS LIKE 'cs';
+SHOW TABLE STATUS LIKE 'cs'\G;
+
+mysqldump -u root -p student > mybackup.sql --> command to export database
+extension does not matters
+
+
+mysql -u root -p lw123 < /root/Desktop/mybackup.sql  --> command to import database
+
+notice that all the commands in DDL uses word TABLE
+
+
+ALTER TABLE student ADD phone bigint;
+
+ALTER TABLE student MODIFY name char(2);
+
+on reducing the size of char data remains but data which was oversized will be removed
+
+ALTER TABLE student DROP id;
+
+select * from student where name LIKE 'um%';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
