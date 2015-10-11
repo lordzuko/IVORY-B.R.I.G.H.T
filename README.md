@@ -20,6 +20,49 @@ So this is a feature to work upon and those who are interested, your contributio
 Well for now we are able to upload upto **200 – 250 MB** (I know its seems nothing when we are talking about Big Data, but still its gets thing in motion) easily through this mechanism. But this gives us flexibility of using Hadoop from anywhere in the network using Web Portal, which is what we were trying to achieve. **So its a little win  for  IVORY.** 
 
 
-[a link](https://github.com/lordzuko/IVORY-B.R.I.G.H.T/Screenshots/Screenshot from 2015-10-11 12:10:36.png)
-[a link](https://github.com/lordzuko/IVORY-B.R.I.G.H.T/Screenshots/Screenshot from 2015-10-11 12:10:48.png)
+![alt tag](https://github.com/lordzuko/IVORY-B.R.I.G.H.T/tree/master/Screenshots/Screenshot from 2015-10-11 12:10:36.png)
+
+![alt tag](https://github.com/lordzuko/IVORY-B.R.I.G.H.T/tree/master/Screenshots/Screenshot from 2015-10-11 12:10:48.png)
+
+![alt tag](https://github.com/lordzuko/IVORY-B.R.I.G.H.T/tree/master/Screenshots/Screenshot from 2015-10-11 12:10:56.png)
+
+![alt tag](https://github.com/lordzuko/IVORY-B.R.I.G.H.T/tree/master/Screenshots/Screenshot from 2015-10-11 12:11:52.png)
+
+![alt tag](https://github.com/lordzuko/IVORY-B.R.I.G.H.T/tree/master/Screenshots/Screenshot from 2015-10-11 12:12:23.png)
+
+![alt tag](https://github.com/lordzuko/IVORY-B.R.I.G.H.T/tree/master/Screenshots/Screenshot from 2015-10-11 12:13:35.png)
+
+![alt tag](https://github.com/lordzuko/IVORY-B.R.I.G.H.T/tree/master/Screenshots/Screenshot-1.png)
+
+![alt tag](https://github.com/lordzuko/IVORY-B.R.I.G.H.T/tree/master/Screenshots/Screenshot-10.png)
+
+![alt tag](https://github.com/lordzuko/IVORY-B.R.I.G.H.T/tree/master/Screenshots/Screenshot-2.png)
+
+![alt tag](https://github.com/lordzuko/IVORY-B.R.I.G.H.T/tree/master/Screenshots/Screenshot-3.png)
+
+![alt tag](https://github.com/lordzuko/IVORY-B.R.I.G.H.T/tree/master/Screenshots/Screenshot-4.png)
+
+![alt tag](https://github.com/lordzuko/IVORY-B.R.I.G.H.T/tree/master/Screenshots/Screenshot-5.png)
+
+![alt tag](https://github.com/lordzuko/IVORY-B.R.I.G.H.T/tree/master/Screenshots/Screenshot-6.png)
+
+![alt tag](https://github.com/lordzuko/IVORY-B.R.I.G.H.T/tree/master/Screenshots/Screenshot-7.png)
+
+![alt tag](https://github.com/lordzuko/IVORY-B.R.I.G.H.T/tree/master/Screenshots/Screenshot-8.png)
+
+![alt tag](https://github.com/lordzuko/IVORY-B.R.I.G.H.T/tree/master/Screenshots/Screenshot-9.png)
+
+![alt tag](https://github.com/lordzuko/IVORY-B.R.I.G.H.T/tree/master/Screenshots/vlcsnap-2015-09-25-00h20m35s176.png)
+
+
+
+
+
+
+
+
+
+
+
+
 
