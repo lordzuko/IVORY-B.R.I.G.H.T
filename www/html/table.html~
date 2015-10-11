@@ -1,0 +1,36 @@
+<form action="/cgi-bin/table_processing_cgi.py" method="GET">
+<table border='5px'>
+<thead>
+<tr>
+    <th>IP</th>
+    <th>HostName</th>
+    <th>HDD</th>
+    <th>Slot</th>
+    <th>Status</th>	
+</tr>
+</thead>
+<tbody>
+
+<!-- I need to generate the values by cgi end of my program-->
+<!-- On Submitting these dynamically generated values are gonna by submitted to the cgi end -->
+<!-- On the otherside of it the name will be static -->
+
+<tr>
+    <th name='ip' value='127.0.0.1'>127.0.0.1</th>  
+    <th name='hostname' value='mycomp'>mycomp</th>
+    <th name='hdd' value='100GB'>100GB</th>
+    <th name='slot' value='2'>2</th>
+    <th name='status' value='Active'>Active</th>	
+<tr/>
+<tr>
+    <th name='ip' value='192.168.0.0'>192.168.0.0</th>
+    <th name='hostname' value='yourcomp'>yourcomp</th>
+    <th name='hdd' value='300GB'>300GB</th>
+    <th name='slot' value='3'>3</th>
+    <th name='status' value='Active'>Active</th>	
+<tr/>
+</tbody>
+</table>
+<button type="submit" value="Submit" >Submit</button>
+</form>
+

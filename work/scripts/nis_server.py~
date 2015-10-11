@@ -1,0 +1,54 @@
+#!/usr/bin/python
+
+import os 
+import sys
+
+# 
+
+if(os.system("rpm -q ypserv") != 0):
+  os.popen("yum install ypserv")
+else:
+  print ("already install !!!")
+
+#set domain name
+
+ypdomain = raw_input("Enter domain name:\n>")
+
+s = "ypdomainname %s" %(ypdomain)
+os.popen(s)
+
+# service restart 
+
+os.popen("setenforce 0")
+os.popen("iptables -F")
+os.popen("service ypserv restart")
+
+# add as many user as u want 
+'''
+ch = 'y'
+while(ch =='y' or  ch == 'Y') :
+  u_name  = raw_input("Enter username:\n>") 
+  u_pass = raw_input("Enter password:\n>")
+
+  os.system("useradd " +u_name) 
+  os.system("echo "+u_pass+"|passwd "+u_name+" --stdin")
+  ch = raw_input("Continue(y/n)")
+'''
+
+
+# using makecommand in /var/yp to build database 
+
+os.system("pwd")
+os.chdir("/var/yp/")
+os.system("pwd")
+os.popen("make")
+
+
+# writing entries in /etc/exports 
+
+f_nis = open("/etc/exports","a")
+s = "/home 192.168.0.0/24(rw)"
+f_nis.write(s)
+f_nis.close()
+os.popen("service nfs restart; exportfs -r ; setenforce 0; iptables -F")
+  

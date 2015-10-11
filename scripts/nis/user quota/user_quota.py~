@@ -1,0 +1,43 @@
+#!/usr/bin/python
+
+def main(argv):
+  
+  # if spacequota == n -->  space quota not applicable
+  # if spacequota == c --> clear space quota
+  # if filequota == n --> file quota not applicable
+  # if filequota == c --> clear file quota
+  
+  if len(argv) != 3:
+    sys.exit("Usage ./user_quota username spacequota filequota")
+  
+  # check if /user directory is already present
+  if not os.system("list -f /user"):
+    os.popen("hadoop fs -mkdir /user")
+    
+  # check if /user/username directory is already present 
+  # if present that will mean user already exits 
+  if not os.system("hadoop fs -mkdir /user/"+username):
+    os.popen("hadoop fs -mkdir /user/"+username)
+    os.popen("hadoop fs -chmod o-rwx /user/"+username)	 
+  
+  # check if spacequota is passed 'n' and 'c' as parameter -- > handle it separately
+  if argv[1] == 'c':
+    os.popen("hadoop dfsadmin -clrSpaceQuota /user/"+username)
+  
+  if argv[1] == 'n':
+    pass
+  else: 
+    os.popen("hadoop dfsadmin -setSpaceQuota "+argv[1]+" /user/"+username)
+    
+  # check if file quota is passed 'n' and 'c' as parameter -- > handle it separately
+  if argv[2] == 'c':
+    os.popen("hadoop dfsadmin -clrQuota /user/"+username)
+  
+  if argv[2] == 'n':
+    pass
+  else: 
+    os.popen("hadoop dfsadmin -setQuota "+argv[2]+" /user/"+username)  
+    
+
+if __name__ == "__main__":
+  main(sys.argv[1:])  

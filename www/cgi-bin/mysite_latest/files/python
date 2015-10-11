@@ -1,0 +1,30 @@
+py_compile.compile('filename')
+
+-----------------------------------------------------------
+imp module
+
+os , subprocess, commands, sys, py_compile, urllib2, py2exe, scapy(must learn and try to use in automation0 --< screen command multiply ssh session)),
+
+
+screen
+
+ctrl+a c 
+
+ctrl+a n
+ctrl+a p
+
+attach and deattach
+
+  
+------------------------------------------------------------
+
+fork (read about it --)> read something about processes
+android -> rooted(apk)
+iphone ->jail break(deb)
+
+
+
+
+
+
+

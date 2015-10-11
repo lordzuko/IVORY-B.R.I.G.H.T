@@ -1,0 +1,18 @@
+<script>
+lw()
+{
+   y=new XMLHttpRequest;
+   alert("req");
+   y.open("GET","http://127.0.0.1/cgi-bin/filemanager.py",false);
+   alert('url');
+   y.send();
+   x=y.responseText;
+   document.getElementById('mydiv').innerHTML=x;
+}
+
+
+</script>
+<body onload="lw()">
+<div id="mydiv">
+</div>
+</body>

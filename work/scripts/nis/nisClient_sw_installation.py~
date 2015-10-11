@@ -1,0 +1,9 @@
+
+
+def ypbind_installation():
+  os.system(c+client_ip+" 'setenforce 0;iptables -F'")
+  os.system(c+client_ip+' "yum install ypbind --quiet -y" &> /dev/null')
+
+
+
+

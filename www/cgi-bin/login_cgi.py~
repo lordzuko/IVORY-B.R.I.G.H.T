@@ -1,0 +1,35 @@
+#!/usr/bin/python2
+
+import sys
+import cgi
+import os
+
+print 'content-type:text/html'
+print 
+
+print '<h1> hi </h1>'
+
+form = cgi.FieldStorage()
+
+username = form['username'].value
+password = form['password'].value
+#s ="\"Dashboard.html\""
+#print "<script> function lw(){document.location.href="+s+" ;}</script>"
+#print "<body onload=lw()></html>"
+
+
+_file = open("Dashboard.html","r")
+print _file.read()
+
+
+
+'''if os.system("./store_user_pass "+username) == 0:
+  print '<h1> hi </h1>'
+  if os.system("./user_pass "+username) ==0:
+    print _file.read()
+
+print '<h1> slfkjlskdf</h1>'''
+
+
+    
+

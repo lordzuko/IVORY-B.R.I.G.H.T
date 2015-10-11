@@ -1,0 +1,20 @@
+<script>
+	<!-- Tasktracker Connected-->
+  	
+	function tt_conn(){
+		y = new XMLHttpRequest();
+		y.open("GET","http://127.0.0.1/cgi-bin/mysite_latest/dashboard/tasktracker_connected.py",true);
+		y.send();
+		
+   		if(y.readyState == 4){
+			x = y.responseText;
+			document.getElementById("tt_conn").innerHTML=x;
+					
+		}
+		y.onreadystatechange = tt_conn;	
+	}
+	function job_completed(){
+		document.getElementById("job_comp").innerHTML=AJAX("GET","http://127.0.0.1/cgi-bin/mysite_latest/dashboard/job_completed.py",true);
+        }
+	function 
+</script>

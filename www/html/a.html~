@@ -1,0 +1,13 @@
+<script>
+	function table_cgi_py(){
+ 	   alert("hi");
+           y = new XMLHttpRequest();
+ 	   y.open("GET","http://127.0.0.1/cgi-bin/table_cgi.py",false);
+
+	   y.send();  
+           x = y.responseText;
+  	  document.getElementById("mydiv").innerHTML=x; 
+       }
+</script>
+
+<body id="mydiv" onload="table_cgi_py()"> here</body>

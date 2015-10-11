@@ -1,0 +1,7 @@
+#!/usr/bin/python2
+
+import os 
+import sys
+import commands as cmd
+
+op.popen("nmap -sP -n 192.168.0.0/24 | grep 192. | awk -F' ' '{print $5}' > nodes.txt")

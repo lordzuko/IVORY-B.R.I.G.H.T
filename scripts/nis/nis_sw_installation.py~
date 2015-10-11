@@ -1,0 +1,14 @@
+#!/usr/bin/python2
+
+import os
+import sys
+import commands as cmd
+
+
+def main():
+  os.system(c+client_ip+" 'setenforce 0;iptables -F'")
+  os.system(c+client_ip+' "yum install ypbind --quiet -y" &> /dev/null')
+
+
+if __name__ == "__main__":
+  main() 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link id="bootstrap-style" href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link id="base-style" href="css/style.css" rel="stylesheet">
+	<link id="base-style-responsive" href="css/style-responsive.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+	<!-- end: CSS -->
+<title>Hadoop NameNode localhost:9001</title>
+    
+</head><body>
+<h1>NameNode 'localhost:9001'</h1>
+
+
+<div id="dfstable"> <table>	  
+<tbody><tr> <td id="col1"> Started: </td><td> Sun Jun 14 21:59:51 IST 2015
+</td></tr><tr> <td id="col1"> Version: </td><td> 1.2.1, r1503152
+</td></tr><tr> <td id="col1"> Compiled: </td><td> Mon Jul 22 15:27:42 PDT 2013 by mattf
+</td></tr><tr> <td id="col1"> Upgrades: </td><td> There are no upgrades in progress.
+</td></tr></tbody></table></div><br>				      
+
+<b><a href="http://127.0.0.1:50070/nn_browsedfscontent.jsp">Browse the filesystem</a></b><br>
+<b><a href="http://127.0.0.1:50070/logs/">Namenode Logs</a></b>
+
+<hr>
+<h3>Cluster Summary</h3>
+<b> Safe mode is ON. <em>The reported blocks is only 0 but the threshold is 0.9990 and the total blocks 1. Safe mode will be turned off automatically.</em><br> </b>
+<b> 6 files and directories, 1 blocks = 7 total.  Heap Size is 56 MB / 114 MB (49%) <br> </b>
+<a class="warning" href="http://127.0.0.1:50070/corrupt_files.jsp" title="List corrupt files">
+  
+</a>
+
+
+<div id="dfstable"> <table>
+<tbody><tr class="rowNormal"> <td id="col1"> Configured Capacity</td><td id="col2"> :</td><td id="col3"> 0 KB</td></tr><tr class="rowAlt"> <td id="col1"> DFS Used</td><td id="col2"> :</td><td id="col3"> 0 KB</td></tr><tr class="rowNormal"> <td id="col1"> Non DFS Used</td><td id="col2"> :</td><td id="col3"> 0 KB</td></tr><tr class="rowAlt"> <td id="col1"> DFS Remaining</td><td id="col2"> :</td><td id="col3"> 0 KB</td></tr><tr class="rowNormal"> <td id="col1"> DFS Used%</td><td id="col2"> :</td><td id="col3"> 100 %</td></tr><tr class="rowAlt"> <td id="col1"> DFS Remaining%</td><td id="col2"> :</td><td id="col3"> 0 %</td></tr><tr class="rowNormal"> <td id="col1"> <a href="http://127.0.0.1:50070/dfsnodelist.jsp?whatNodes=LIVE">Live Nodes</a> </td><td id="col2"> :</td><td id="col3"> 0</td></tr><tr class="rowAlt"> <td id="col1"> <a href="http://127.0.0.1:50070/dfsnodelist.jsp?whatNodes=DEAD">Dead Nodes</a> </td><td id="col2"> :</td><td id="col3"> 0</td></tr><tr class="rowNormal"> <td id="col1"> <a href="http://127.0.0.1:50070/dfsnodelist.jsp?whatNodes=DECOMMISSIONING">Decommissioning Nodes</a> </td><td id="col2"> :</td><td id="col3"> 0</td></tr><tr class="rowAlt"> <td id="col1"> Number of Under-Replicated Blocks</td><td id="col2"> :</td><td id="col3"> 0</td></tr></tbody></table></div><br>
+There are no datanodes in the cluster
+<hr>
+<h3> NameNode Storage: </h3><div id="dfstable"> <table title="NameNode Storage" border="1" cellpadding="10" cellspacing="0">
+<thead><tr><td><b>Storage Directory</b></td><td><b>Type</b></td><td><b>State</b></td></tr></thead><tbody><tr><td>/namenode</td><td>IMAGE_AND_EDITS</td><td>Active</td></tr></tbody></table></div><br>
+
+<hr>
+This is <a href="http://hadoop.apache.org/">Apache Hadoop</a> release 1.2.1
+
+
+</body></html>
