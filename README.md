@@ -18,3 +18,8 @@ Apache Server after splitting or chunking of files. Here is one limitation which
 So this is a feature to work upon and those who are interested, your contribution will be appreciated.
 
 Well for now we are able to upload upto **200 – 250 MB** (I know its seems nothing when we are talking about Big Data, but still its gets thing in motion) easily through this mechanism. But this gives us flexibility of using Hadoop from anywhere in the network using Web Portal, which is what we were trying to achieve. **So its a little win  for  IVORY.** 
+
+
+[a link](https://github.com/lordzuko/IVORY-B.R.I.G.H.T/Screenshots/Screenshot from 2015-10-11 12:10:36.png)
+[a link](https://github.com/lordzuko/IVORY-B.R.I.G.H.T/Screenshots/Screenshot from 2015-10-11 12:10:48.png)
+
