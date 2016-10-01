@@ -19,7 +19,7 @@ So this is a feature to work upon and those who are interested, your contributio
 
 Well for now we are able to upload upto **200 – 250 MB** (I know its seems nothing when we are talking about Big Data, but still its gets thing in motion) easily through this mechanism. But this gives us flexibility of using Hadoop from anywhere in the network using Web Portal, which is what we were trying to achieve. **So its a little win  for  IVORY.** 
 
-
+![screenshot](https://github.com/lordzuko/IVORY-B.R.I.G.H.T/blob/master/Screenshots/Screenshot%20from%202015-10-11%2012:11:52.png)
 
 
 
